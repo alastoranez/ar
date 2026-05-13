@@ -3,6 +3,7 @@
 
 
 
+
 <meta charset="utf-8">
 <meta name="download_date" content="2026-04-28T21:14:51.542Z">
 <style>
@@ -2371,22 +2372,29 @@ requestAnimationFrame(process)
 //# sourceMappingURL=bootstrap.bundle.min.js.map</script><div class="container p-2"><div id="missinghid" style="padding: 12px 20px; bottom: 80px; left: 0pt; right: 0pt; z-index: 1030; display: none;"><div class="container"><div style="border: 2px solid rgb(13, 110, 253); padding: 12px; color: rgb(13, 110, 253); background-color: rgb(255, 255, 255);"><p class="mb-1">&nbsp;&nbsp; <span class="ds-i18n" id="ds-i18n-2">Unsupported browser.</span></p><p class="mb-1"><span class="ds-i18n" id="ds-i18n-3">Please use a web browser with WebHID support (e.g. Google Chrome or Microsoft Edge) on a PC or Mac.</span> <span class="ds-i18n" id="ds-i18n-4">Firefox is supported with the WebHID extension installed.</span></p><p class="mb-0"><span class="ds-i18n" id="ds-i18n-5">Using this utility on a phone or tablet is not supported.</span></p></div></div></div><div class="vstack p-2" id="offlinebar"><button class="btn btn-outline-primary" type="button" onclick="connect()" id="btnconnect"><span class="spinner-border spinner-border-sm" id="connectspinner" aria-hidden="true" style="display: none;"></span> <span class="ds-i18n" id="ds-i18n-7">اتصال</span></button><br></div><div class="vstack p-2" id="onlinebar" style="display: none;"><div class="row"><div class="hstack col-sm-9"><p><b class="ds-i18n" id="ds-i18n-8">متصل بـ:</b></p>&nbsp;<p id="devname"></p></div><div class="col-sm-3"><p id="d-bat" style="text-align: right;"></p></div></div><button class="ds-i18n btn btn-outline-secondary" type="button" onclick="disconnect()" id="ds-i18n-9">قطع الاتصال</button><br></div><div class="container" id="mainmenu" style="display: none;"><ul class="mb-3 nav nav-tabs" id="mainTabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" type="button" id="controller-tab" aria-controls="controller-content" aria-selected="true" data-bs-target="#controller-content" data-bs-toggle="tab" role="tab"><i class="fas fa-gamepad"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-10">معايرة</span></button><br>
     <br>
     <br>
+    <br>
 </li><li class="nav-item" role="presentation"><button class="nav-link" type="button" id="iمعلومات-tab" aria-controls="iمعلومات-content" aria-selected="false" data-bs-target="#iمعلومات-content" data-bs-toggle="tab" role="tab" tabindex="-1"><i class="fas fa-iمعلومات-circle"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-11">Iمعلومات</span></button><br>
+    <br>
     <br>
     <br>
 </li><li class="nav-item" role="presentation"><button class="nav-link" type="button" id="debug-tab" aria-controls="debug-content" aria-selected="false" data-bs-target="#debug-content" data-bs-toggle="tab" role="tab" tabindex="-1"><i class="fas fa-bug"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-12">تصحيح الأخطاء</span></button><br>
     <br>
     <br>
+    <br>
 </li></ul><div class="tab-content" id="mainTabsContent"><div class="tab-pane active show" id="controller-content" role="tabpanel" aria-labelledby="controller-tab"><div class="row"><div class="col-md-6 col-sm-12"><div class="card text-bg-light"><div class="card-header"><i class="fas fa-gamepad"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-13">معلومات عصا التحكم</span></div><dl class="row px-3 py-2" id="fwiمعلومات"></dl><span class="row pb-4 px-4" id="iمعلوماتshowall"><button class="btn btn-outline-secondary" onclick="show_iمعلومات_tab()"><i class="fas fa-plus me-1"></i> <span class="ds-i18n" id="ds-i18n-14">عرض الكل</span></button></span></div><br><div class="d-flex justify-content-end" id="quick-tests-div"><button class="btn ds-btn btn-outline-primary mb-3" type="button" onclick="show_quick_test_modal()" id="quick-test-btn"><i class="fas fa-vial" id="quick-test-icon"></i>&nbsp;&nbsp; <span class="ds-i18n" id="quick-test-text">Quick Test</span></button></div><div class="mx-3 text-center" id="controller-svg-container"><div id="controller-svg-placeholder"></div></div></div><div class="col-md-6 col-sm-12" style="min-width: 330px;"><div class="vstack p-2 gap-2"><button class="btn ds-btn btn-primary" type="button" onclick="calibrate_stick_centers()" id="four-step-center-calib" style="display: none;"><span class="ds-i18n" id="ds-i18n-15">معايرة تمركز العصا</span></button><div class="btn-group w-100" id="quick-center-calib-group" style="display: none;" role="group"><button class="btn ds-btn btn-primary flex-grow-1" type="button" onclick="executeSelectedCenterمعايرة()" id="quick-center-calib"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ds-i18n" id="ds-i18n-16">معايرة تمركز العصا</span></button> <button class="btn ds-btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false" style=""><span class="visually-hidden">Toggle dropdown</span></button><ul class="dropdown-menu"><li><a href="." class="dropdown-item" onclick='setCenterمعايرةMethod("quick",event)'><i class="fas fa-check me-2" id="check-quick" style="display: none;"></i><span class="ds-i18n" id="ds-i18n-17">استخدم المعايرة السريعة</span></a><br>
+    <br>
     <br>
     <br>
 </li><li><a href="." class="dropdown-item" onclick='setCenterمعايرةMethod("four-step",event)'><i class="fas fa-check me-2" id="check-four-step"></i><span class="ds-i18n" id="ds-i18n-18">استخدم معايرة من أربع خطوات</span></a><br>
     <br>
     <br>
+    <br>
 </li></ul></div><div class="btn-group w-100" id="range-calib-group" role="group"><button class="btn ds-btn btn-primary flex-grow-1" type="button" onclick="executeSelectedRangeمعايرة()" id="range-calib"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ds-i18n" id="ds-i18n-19">معايرة مدى العصا</span></button> <button class="btn ds-btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false" style=""><span class="visually-hidden">Toggle dropdown</span></button><ul class="dropdown-menu"><li><a href="." class="dropdown-item" onclick='setRangeمعايرةMethod("normal",event)'><i class="fas fa-check me-2" id="check-range-normal"></i><span class="ds-i18n" id="ds-i18n-20">استخدم الوضع العادي</span></a><br>
     <br>
     <br>
+    <br>
 </li><li><a href="." class="dropdown-item" onclick='setRangeمعايرةMethod("expert",event)'><i class="fas fa-check me-2" id="check-range-expert" style="display: none;"></i><span class="ds-i18n" id="ds-i18n-21">استخدم وضع الخبراء</span></a><br>
+    <br>
     <br>
     <br>
 </li></ul></div><button class="btn ds-btn btn-primary" type="button" onclick="ds5_finetune()" id="ds5finetune"><span class="ds-i18n" id="ds-i18n-22">معايرة عصا الضبط الدقيق ..</span></button><hr><button class="ds-i18n btn ds-btn btn-success" type="button" onclick="flash_all_changes()" id="savechanges">حفظ التغييرات بشكل دائم</button> <button class="ds-i18n btn ds-btn btn-secondary" type="button" onclick="openمعايرةتاريخModal()" id="restore-calibration-btn">استعادة calibration</button> <button class="ds-i18n btn ds-btn btn-danger" type="button" onclick="reboot_controller()" id="resetBtn">إعادة تشغيل عصا التحكم</button><div class="card text-bg-light"><div class="card-header"><i class="fas fa-crosshairs"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-23">معلومات عصا التحكم</span></div><div class="vstack px-2"><center><div style="position: relative;"><canvas height="150" id="stickCanvas" width="300"></canvas><svg class="bi" height="32" width="32" id="circularityCheckIcon" onclick="show_circularity_warning()" style="cursor: pointer; position: absolute; top: 25px; right: -30px; display: none;"><use xlink:href="#iمعلومات"></use></svg></div></center></div><div class="px-2"><div class="hstack"><div class="vstack" style="text-align: center;"><span>LX:</span><pre id="lx-lbl" style="min-width: 80px;"></pre></div><div class="vstack" style="text-align: center;"><span>LY:</span><pre id="ly-lbl" style="min-width: 80px;"></pre></div><div class="vstack" id="stick-item-rx" style="text-align: center;"><span>RX:</span><pre id="rx-lbl" style="min-width: 80px;"></pre></div><div class="vstack" id="stick-item-ry" style="text-align: center;"><span>RY:</span><pre id="ry-lbl" style="min-width: 80px;"></pre></div></div></div><div class="px-2"><center><div class="mb-3 btn-group" aria-label="Display mode options" role="group"><input class="btn-check" id="normalMode" name="displayMode" value="normal" checked="checked" type="radio"> <label class="ds-i18n btn btn-outline-secondary btn-sm" for="normalMode" id="ds-i18n-24">Normal</label> <input class="btn-check" id="centerZoomMode" name="displayMode" value="centerZoom" type="radio"> <label class="ds-i18n btn btn-outline-secondary btn-sm" for="centerZoomMode" id="ds-i18n-25">10x zoom</label> <input class="btn-check" id="checkCircularityMode" name="displayMode" value="checkCircularity" type="radio"> <label class="ds-i18n btn btn-outline-secondary btn-sm" for="checkCircularityMode" id="ds-i18n-26">التحقق من الدوران</label></div></center></div></div></div></div></div></div><div class="tab-pane" id="iمعلومات-content" role="tabpanel" aria-labelledby="iمعلومات-tab"><div class="container-fluid py-4"><div class="row"><div class="py-3 col-lg-12 col-xl-6"><div class="card"><h5 class="card-header"><i class="fas fa-code"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-27">البرمجيات</span></h5><div class="card-body"><dl class="row" id="fwiمعلوماتextra-fw"></dl></div></div></div><div class="py-3 col-lg-12 col-xl-6"><div class="card"><h5 class="card-header"><i class="fas fa-microchip"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-28">العتاد</span></h5><div class="card-body"><dl class="row" id="fwiمعلوماتextra-hw"></dl></div></div></div></div></div></div><div class="tab-pane" id="debug-content" role="tabpanel" aria-labelledby="debug-tab"><div class="container-fluid py-4"><div class="row"><p class="ds-i18n" id="ds-i18n-29">الأقسام أدناه ليست مفيدة، فقط بعض معلومات التصحيح أو أوامر يدوية</p></div><div class="row"><div class="col-md-6 col-sm-12"><div class="card text-bg-light"><div class="card-header"><i class="fas fa-bug"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-30">معلومات التصحيح</span></div><div class="vstack p-2"><div class="hstack"><p class="ds-i18n" id="ds-i18n-31">حالة الـNVS</p><p class="ds-i18n ms-auto" id="d-nvstatus">غير معلوم</p></div></div></div><br></div><div class="col-md-6 col-sm-12"><div class="card text-bg-light"><div class="card-header"><i class="fas fa-skull-crossbones"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-32">أزرار تصحيح الأخطاء</span></div><div class="vstack p-2 gap-2"><div class="gap-2 hstack"><button class="ds-i18n btn ds-btn btn-success" type="button" onclick="refresh_nvstatus()" id="ds-i18n-33">حالة إستعلام NVS</button> <button class="ds-i18n btn ds-btn btn-primary" type="button" onclick="nvsunlock()" id="ds-i18n-34">فتح قفل الـNVS</button> <button class="ds-i18n btn ds-btn btn-primary" type="button" onclick="nvslock()" id="ds-i18n-35">قفل الـNVS</button></div></div></div></div></div></div></div></div></div></div><div class="container-fluid fixed-bottom" style="z-index: 1040; pointer-events: none; bottom: 70px;"><div class="container"><div class="mb-3" id="alert-container" style=""></div></div></div><div id="aboutdrift" style="position: fixed; bottom: 70px; left: 0px; right: 0px; z-index: 1030;"><div class="container">
@@ -2404,10 +2412,10 @@ requestAnimationFrame(process)
 //
 <a href="alastoranez-en.html" title="Change Language to English">English</a>
 //
-<a href="index.html" title="تغير اللغة للعربية">العربية</a> &nbsp;&nbsp; <span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Style 1 - </span><a href="index1.html"><span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span style="font-weight: bold;">Style 2</span></span></a></p>
+<a href="file:///C:/Users/yusef.YUSEF/OneDrive/Desktop/nez/%D8%B5%D9%82%D8%AD%D8%A7%D8%AA%20%D9%85%D9%87%D9%85%D8%A9/index.html" title="تغير اللغة للعربية">العربية</a> &nbsp;&nbsp; <span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Style 1 - </span><span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span style="font-weight: bold;"><a href="index1.html">Style 2</a> -&nbsp; </span></span><a href="index2.html"><span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span style="font-weight: bold;"> الاصدار المطور</span></span></a></p>
 <span style="color: rgb(10, 10, 10); font-family: Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span style="font-weight: bold;"></span></span><footer class="bg-body-tertiary border-top fixed-bottom"></footer></div>
 </div>
-<div class="gap-2" id="lastConnected" style="display: none;"><span class="text-muted"><i class="fas fa-history"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-40">Last connected</span>:</span> <span id="lastConnectedIمعلومات"></span><div id="lastConnectedWarning" style="display: none;"><p class="text-danger" style="margin-top: 8px; margin-bottom: 0pt;"><i class="fas fa-regular fa-triangle-exclamation"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-41">This controller has unsaved changes that will be lost when the controller is rebooted.</span></p></div></div></div></div><footer class="bg-body-tertiary border-top fixed-bottom" style=""></footer><script async="">
+<div class="gap-2" id="lastConnected" style="display: none;"><span class="text-muted"><i class="fas fa-history"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-40">Last connected</span>:</span> <span id="lastConnectedIمعلومات"></span><div id="lastConnectedWarning" style="display: none;"><p class="text-danger" style="margin-top: 8px; margin-bottom: 0pt;"><i class="fas fa-regular fa-triangle-exclamation"></i>&nbsp;&nbsp;<span class="ds-i18n" id="ds-i18n-41">تحتوي وحدة التحكم هذه على تغييرات غير محفوظة سيتم فقدها عند إعادة تشغيل وحدة التحكم.</span></p></div></div></div></div><footer class="bg-body-tertiary border-top fixed-bottom" style=""></footer><script async="">
 // Copyright 2012 Google Inc. All rights reserved.
  
 (function(){
@@ -3494,20 +3502,25 @@ data:{scriptSource:Mc,containerProduct:u,debug:!1,id:F(5),targetRef:{ctid:F(5),i
                 <li class="ds-i18n" id="ds-i18n-62">أضافة معايرة لأزرار الـL2/R2.<br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-63">تحسين الكشف عن النسخ المقلدة، مما يعود بفائدة لأولئك الذين يسعون إلى شراء يد تحكم مستعملة للتأكد من جودتها.<br>
+    <br>
     <br>
     <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-64">تحسين واجهة المستخدم (مثل توفير معلومات إضافية ليد التحكم)<br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-65">إضافة دعم لإعادة معايرة IMUs.<br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-66">وإضافة إلى ذلك، استكشاف إمكانية تصليح يد تحكم DualShock التي لا تعمل (يوجد ناقشات بشأن لك على الديسكورد للأطراف المهتمة).<br>
+    <br>
     <br>
     <br>
 </li>
@@ -3518,12 +3531,15 @@ data:{scriptSource:Mc,containerProduct:u,debug:!1,id:F(5),targetRef:{ctid:F(5),i
                 <li class="ds-i18n" id="ds-i18n-68">DualSense Edge<br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-69">DualShock 3<br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-70">يد تحكم الـXBox<br>
+    <br>
     <br>
     <br>
 </li>
@@ -3615,12 +3631,15 @@ data:{scriptSource:Mc,containerProduct:u,debug:!1,id:F(5),targetRef:{ctid:F(5),i
                 <li><span class="ds-i18n" id="ds-i18n-90">فكّر في</span> <a href="https://paypal.me/alaincarlucci" target="_blank" class="ds-i18n" id="ds-i18n-91">التبرع</a> <span class="ds-i18n" id="ds-i18n-92">لدعم جهودي في وقت متأخر من الليل في الهندسة العكسية.</span><br>
     <br>
     <br>
+    <br>
 </li>
                 <li class="ds-i18n" id="ds-i18n-93">اشحن لي يد تحكم تريد إضافتها (أرسل لي رسالة بريد إلكتروني).<br>
     <br>
     <br>
+    <br>
 </li>
                 <li><a href="https://github.com/dualshock-tools/dualshock-tools.github.io/blob/main/TRANSLATIONS.md" class="ds-i18n" target="_blank" id="ds-i18n-94">ترجمة هذا الموقع بلغتك</a><span class="ds-i18n" id="ds-i18n-95">، لمساعدة المزيد من الناس من أمثالك!</span><br>
+    <br>
     <br>
     <br>
 </li>
@@ -3865,60 +3884,75 @@ unresponsive in some games.</span>
               <li><a class="dropdown-item" href="." data-step="15">15</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="14">14</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="13">13</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="12">12</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="11">11</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="10">10</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="9">9</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="8">8</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="7">7</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="6">6</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="5">5</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="4">4</a><br>
+    <br>
     <br>
     <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="3">3</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="2">2</a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." data-step="1">1</a><br>
+    <br>
     <br>
     <br>
 </li>
@@ -3934,10 +3968,12 @@ unresponsive in some games.</span>
               </a><br>
     <br>
     <br>
+    <br>
 </li>
               <li><a class="dropdown-item" href="." onclick="finetune_quick_calibrate_range()">
                 <i class="fas fa-expand-arrows-alt"></i>&nbsp;<span class="ds-i18n" id="ds-i18n-116">Circularity</span>
               </a><br>
+    <br>
     <br>
     <br>
 </li>
@@ -4030,12 +4066,15 @@ unresponsive in some games.</span>
         <li class="ds-i18n" id="ds-i18n-135">هذا الموقع غير مرتبط بـ Sony، PlayStation &amp; co.<br>
     <br>
     <br>
+    <br>
 </li>
         <li class="ds-i18n" id="ds-i18n-136">هذه الخدمة مقدمة دون ضمان. استخدمها على مسؤوليتك.<br>
     <br>
     <br>
+    <br>
 </li>
         <li class="ds-i18n" id="ds-i18n-137">يستخدم هذا الموقع التحليلات لتحسين الخدمة.<br>
+    <br>
     <br>
     <br>
 </li>
@@ -4045,8 +4084,10 @@ unresponsive in some games.</span>
 للاستعمال.<br>
     <br>
     <br>
+    <br>
 </li>
         <li class="ds-i18n" id="ds-i18n-139">قبل إجراء المعايرة الدائمة، جرب المعايرة المؤقتة لضمان أن يعمل كل شيء بشكل جيد.<br>
+    <br>
     <br>
     <br>
 </li>
@@ -4165,8 +4206,10 @@ unresponsive in some games.</span>
             <li class="ds-i18n" id="ds-i18n-156"><b>Internally</b>: by soldering a wire from a +1.8V source to the write-protect TP.<br>
     <br>
     <br>
+    <br>
 </li>
             <li class="ds-i18n" id="ds-i18n-157"><b>Externally</b>: by applying +1.8V directly to the visible test point without opening the controller.<br>
+    <br>
     <br>
     <br>
 </li>
